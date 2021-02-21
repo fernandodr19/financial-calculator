@@ -8,6 +8,7 @@ import (
 
 func main() {
 	log := logrus.New()
+	log.Infof("Build info: time[%s] git_hash[%s]", BuildTime, BuildGitCommit)
 
 	s1 := investments.Scenario{
 		AnnualYield:    6,
