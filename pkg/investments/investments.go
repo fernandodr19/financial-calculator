@@ -12,15 +12,15 @@ type Scenario struct {
 	Years          int
 }
 
-func (s Scenario) Run() []float64 {
+func (s Scenario) Run() []Result {
 	months := s.Years * 12
 
-	records := make([]float64, months)
+	records := make([]Result, months)
 
 	currentBalance := s.InitialBalance
 	for i := 0; i < months; i++ {
 		currentBalance = (currentBalance * (1 + s.GetMonthYield()/100)) + s.MonthApply
-		records[i] = currentBalance
+		records[i] = Result(currentBalance)
 	}
 
 	return records
