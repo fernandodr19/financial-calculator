@@ -5,6 +5,7 @@ import (
 	"math"
 )
 
+// Scenario is a simulation of a hypothetical investment scenario
 type Scenario struct {
 	AnnualYield    float64
 	InitialBalance float64
