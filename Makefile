@@ -17,5 +17,11 @@ clean:
 
 .PHONY: test
 test:
-	@echo "==> Go test"
-	@gotest ./...
+	@echo "==> Running tests"
+	go test -race -v ./...
+
+.PHONY: test-coverage
+test-coverage:
+	@echo "==> Running tests coverage"
+	@richgo test -failfast -coverprofile=coverage.out ./...
+	@go tool cover -html=coverage.out -o coverage.html
