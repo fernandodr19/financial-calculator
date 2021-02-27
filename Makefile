@@ -17,5 +17,5 @@ clean:
 
 .PHONY: test
 test:
-	@echo "==> Go test"
-	@gotest ./...
+	@echo "==> Running Tests"
+	go test -race -v ./...
