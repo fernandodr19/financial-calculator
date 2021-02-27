@@ -14,3 +14,8 @@ clean:
 	@echo "==> Cleaning releases"
 	@GOOS=${OS} go clean -i -x ./...
 	@rm -f build/*
+
+.PHONY: test
+test:
+	@echo "==> Go test"
+	@gotest ./...
