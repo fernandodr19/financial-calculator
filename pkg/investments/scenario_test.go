@@ -24,7 +24,7 @@ func Test(t *testing.T) {
 			},
 			ExpectedLen:        12,
 			ExpectedMonthYield: 1.2115276586285886,
-			ExpectedFinalValue: 10,
+			ExpectedFinalValue: 0,
 		},
 	}
 	for _, tC := range testCases {
