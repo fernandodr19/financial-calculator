@@ -17,10 +17,10 @@ func main() {
 	log.Infof("Build info: time[%s] git_hash[%s]", BuildTime, BuildGitCommit)
 
 	s1 := investments.Scenario{
-		AnnualYield:    6,
-		InitialBalance: 200000.00,
-		MonthApply:     3000.00,
-		Years:          40,
+		AnnualYield:    7,
+		InitialBalance: 20000.00,
+		MonthApply:     1000.00,
+		Years:          20,
 	}
 	log.Infoln(s1.String())
 	// log.Infoln(s1.GetMonthYield())
