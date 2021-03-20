@@ -22,8 +22,8 @@ func Test(t *testing.T) {
 				MonthApply:     0,
 				Years:          1,
 			},
-			ExpectedLen:        12,
-			ExpectedMonthYield: 1.2115276586285886,
+			ExpectedLen:        1,
+			ExpectedMonthYield: 0.7974140428903764,
 			ExpectedFinalValue: 0,
 		},
 	}
@@ -34,7 +34,7 @@ func Test(t *testing.T) {
 
 			// assert
 			assert.Equal(t, tC.ExpectedLen, len(results))
-			assert.Equal(t, tC.ExpectedMonthYield, tC.Scenario.GetMonthYield())
+			assert.Equal(t, tC.ExpectedMonthYield, tC.Scenario.GetMonthYield()*100)
 
 			if tC.ExpectedLen == 0 {
 				return
